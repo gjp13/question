@@ -1,0 +1,9 @@
+<!--pages/result/result.wxml-->
+<view class="container center content">
+  <view class='scoreLabel'>
+    <text>Score:</text>
+  </view>
+  <view class='scoreText'>
+    <text>{{score}}</text>
+  </view>
+</view> 

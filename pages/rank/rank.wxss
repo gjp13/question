@@ -1,0 +1,25 @@
+/* pages/rank/rank.wxss */
+.rankList{
+  margin-left: auto;
+  margin-right: auto;
+  width:500rpx;
+}
+.center{
+  text-align:center;
+}
+.nameLabel{
+  float:left;
+}
+.scoreLabel{
+  display:inline;
+}
+.rankLabel{
+  float:right;
+}
+.selfRank{
+  margin-top: 100rpx
+}
+
+.selfText{
+  color: red;
+}

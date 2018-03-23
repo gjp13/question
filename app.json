@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/question/question",
+    "pages/rank/rank",
+    "pages/result/result"
+  ],
+  "window":{
+    "navigationStyle":"custom"
+  }
+}

@@ -1,0 +1,21 @@
+<!--pages/rank/rank.wxml-->
+<view class="container">
+  <view class='rankList center'>
+    <text class="nameLabel">Name</text>
+    <text class="scoreLabel">Score</text>
+    <text class="rankLabel">Rank</text>
+  </view>
+  <view class='rankList center' wx:for="{{scoreVOS}}">
+    <text class="nameLabel {{item.openId==self.openId? 'selfText':''}}">{{item.userName}}</text>
+    <text class="scoreLabel {{item.openId==self.openId? 'selfText':''}}">{{item.score}}</text>
+    <text class="rankLabel {{item.openId==self.openId? 'selfText':''}}">{{item.rank}}</text>
+  </view>
+  <view class='rankList selfRank'>
+    <text class="">Your Rank</text>
+  </view>
+  <view class='rankList center'>
+    <text class="nameLabel selfText">{{self.userName}}</text>
+    <text class="scoreLabel selfText">{{self.score}}</text>
+    <text class="rankLabel selfText">{{self.rank}}</text>
+  </view>
+</view>

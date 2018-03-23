@@ -1,0 +1,32 @@
+/* pages/question/question.wxss */
+.timer{
+  height: 50rpx
+}
+.content{
+  margin-left: auto;
+  margin-right: auto;
+  width:600rpx;
+}
+.typeText{
+  margin-top: 20rpx;
+}
+.questionText{
+  margin-top: 20rpx;
+}
+.choiceGreen{
+  border:2px solid green;
+  border-radius: 10%;
+}
+
+.choiceRed{
+  border:2px solid red;
+  border-radius: 10%;
+}
+
+.buttonType {
+  width: 500rpx;
+  background-color: rgb(240, 125, 110);
+  color: white;
+  margin-top:20rpx;
+  border:  0px solid rgb(240, 125, 110);
+}

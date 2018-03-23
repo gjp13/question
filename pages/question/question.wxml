@@ -1,0 +1,35 @@
+<!--pages/question/question.wxml-->
+<view class="container content">
+  <view class='timer'>
+    <text wx:if="{{!finishFlag}}" style="display: block;">Second: {{clock+1}}s</text>
+    <text wx:if="{{finishFlag}}" style="display: block;">Time Out</text>
+  </view>
+  <view class='typeText'>
+    <text>{{question.difficulty}}</text>
+    <!--<text>{{question.type}}</text>-->
+  </view>
+  <view class='questionText'>
+    <text>{{question.questionDescription}}</text>
+    <view wx:if="{{question.type=='Multiple'}}">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{question.choices}}">
+          <view class="{{finishFlag?item.flag:''}}">
+            <checkbox value="{{item.value}}" checked="{{item.checked}}" disabled="{{finishFlag}}"/>{{item.value}}
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+    <view wx:elif="{{question.type=='Single'}}">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{question.choices}}">
+          <view class="{{finishFlag?item.flag:''}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}" disabled="{{finishFlag}}"/>{{item.value}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+    
+  </view>
+  <button wx:if="{{!finishFlag}}" class="buttonType" bindtap="submit">提交</button>
+  <button wx:if="{{finishFlag}}" class="buttonType" bindtap="nextQuestion">下一题</button>
+</view>

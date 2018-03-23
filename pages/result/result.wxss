@@ -1,0 +1,19 @@
+/* pages/result/result.wxss */
+.center{
+  text-align:center;
+}
+.content{
+  margin-left: auto;
+  margin-right: auto;
+  width:500rpx;
+}
+.scoreLabel{
+  font-size: 100rpx;
+  width:500rpx;
+  float: left;
+}
+.scoreText{
+  font-size: 250rpx;
+  width:500rpx;
+  margin-top: 20rpx;
+}
